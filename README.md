@@ -20,8 +20,11 @@ To generate pair of private and public keys, you can use the following command :
 openssl.exe genrsa -out private.key 4096
 openssl.exe rsa -in private.key -pubout > public.pub
 ```
+![generate](https://user-images.githubusercontent.com/52102633/68892223-199b2a00-06e8-11ea-8044-4fe375234726.jpg)
 
 >You will obtain an RSA 4096 bits private key, and the associated public key
+
+> Many others method can be used to generate private and public key
 
 # OpenSSL path
 
@@ -40,6 +43,8 @@ Line 115, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust i
 >- with private key private.key  
 >- signature will be in file C:\folder\signature.sha512  
 >- C:\folder\file_to_sign.pdf will be the signed file  
+
+![signature](https://user-images.githubusercontent.com/52102633/68892224-199b2a00-06e8-11ea-829d-f7fd6d7b0625.jpg)
 
 ## File check with check mode
 
