@@ -47,7 +47,7 @@ Sign method use SHA512 fingerprint method, which will sign with an asymetric key
 Write-Host "
 Example : 
 
-[File signature]
+File signature :
 PowerSign.ps1 -mode signature -privateKey C:\folder\private.key -signature C:\folder\signature.sha512 -file C:\folder\file_to_sign.pdf
 
 Whith this command line : 
@@ -57,7 +57,7 @@ Whith this command line :
 - C:\folder\file_to_sign.pdf will be the signed file
 
 
-[Check signature]
+Check signature :
 PowerSign.ps1 -mode check -publicKey C:\folder\public.pub -signature C:\folder\signature.sha512 -file C:\folder\file_to_check.pdf
 
 With this command line : 
