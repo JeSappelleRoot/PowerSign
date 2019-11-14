@@ -40,7 +40,7 @@ Sign method use SHA512 fingerprint method, which will sign with an asymetric key
 -mode       : [sign/check] to specify which mode use
 -signature  : file which contains signature
 -file       : specify which file sign/check
-" -ForegroundColor Green
+"
 
 
 
@@ -71,7 +71,7 @@ Remember - To generate asymetric keys, use these commands :
 - openssl.exe genrsa -out private.key 4096
 - openssl.exe rsa -in private.key -pubout > public.pub
 
-" -ForegroundColor Yellow
+"
 }
 
 
