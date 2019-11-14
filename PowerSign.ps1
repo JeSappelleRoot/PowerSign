@@ -48,28 +48,28 @@ Write-Host "
 Example : 
 
 [File signature]
-SignMe.ps1 -mode signature -privateKey C:\dossier\private.key -signature C:\folder\signature.sha512 -file C:\folder\file_to_sign.pdf
+PowerSign.ps1 -mode signature -privateKey C:\folder\private.key -signature C:\folder\signature.sha512 -file C:\folder\file_to_sign.pdf
 
 Whith this command line : 
--use sign mode
--with private key private.key
--ignature will be in file C:\folder\signature.sha512
--C:\folder\file_to_sign.pdf will be the signed file
+- use sign mode
+- with private key private.key
+- signature will be in file C:\folder\signature.sha512
+- C:\folder\file_to_sign.pdf will be the signed file
 
 
 [Check signature]
-SignMe.ps1 -mode check -publicKey C:\folder\public.pub -signature C:\folder\signature.sha512 -file C:\folder\file_to_check.pdf
+PowerSign.ps1 -mode check -publicKey C:\folder\public.pub -signature C:\folder\signature.sha512 -file C:\folder\file_to_check.pdf
 
 With this command line : 
--use check mode
--with public key public.pub
--signature is in file C:\folder\signature.sha512
--signed file to check is C:\folder\file_to_check.pdf
+- use check mode
+- with public key public.pub
+- signature is in file C:\folder\signature.sha512
+- signed file to check is C:\folder\file_to_check.pdf
 
 ------------------------------------------
 Remember - To generate asymetric keys, use these commands : 
--openssl.exe genrsa -out private.key 4096
--openssl.exe rsa -in private.key -pubout > public.pub
+- openssl.exe genrsa -out private.key 4096
+- openssl.exe rsa -in private.key -pubout > public.pub
 
 " -ForegroundColor Yellow
 }
