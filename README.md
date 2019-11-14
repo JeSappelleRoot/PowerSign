@@ -27,7 +27,7 @@ openssl.exe rsa -in private.key -pubout > public.pub
 
 ## File signature with signature mode
 
-**Command line :** `PowerSign.ps1 -mode signature -privateKey C:\dossier\private.key -signature C:\folder\signature.sha512 -file C:\folder\file_to_sign.pdf`
+**Command line :** `PowerSign.ps1 -mode signature -privateKey C:\folder\private.key -signature C:\folder\signature.sha512 -file C:\folder\file_to_sign.pdf`
 
 >Whith this command line :   
 >- use sign mode  
