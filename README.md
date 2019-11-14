@@ -1,5 +1,16 @@
 # PowerSign
 
+- [PowerSign](#powersign)
+- [Command line arguments](#command-line-arguments)
+- [Asymetric key generation](#asymetric-key-generation)
+- [OpenSSL path](#openssl-path)
+- [Example](#example)
+  - [File signature with signature mode](#file-signature-with-signature-mode)
+  - [File check with check mode](#file-check-with-check-mode)
+  - [In case of file alteration/modification](#in-case-of-file-alterationmodification)
+- [Troubleshooting](#troubleshooting)
+  - [Unable to load key file](#unable-to-load-key-file)
+
 
 PowerSign is a simple Powershell script to perform checks and signatures with OpenSSL Windows version. 
 
@@ -66,3 +77,33 @@ Assume we have a file like :
 >- with public key public.pub
 >- signature is in file C:\folder\signature.sha512
 >- signed file to check is C:\folder\file_to_check.pdf
+
+![check](https://user-images.githubusercontent.com/52102633/68897105-6e43a280-06f2-11ea-8671-70b6a3be09b1.jpg)
+
+## In case of file alteration/modification
+
+Assume the previous file is modified with the new following content : 
+
+![modified TXT](https://user-images.githubusercontent.com/52102633/68897108-6e43a280-06f2-11ea-9c57-f51bb41061b6.jpg)
+
+A new signature checking with PowerSign will report a error : 
+
+![check failed](https://user-images.githubusercontent.com/52102633/68897107-6e43a280-06f2-11ea-8349-c4f8fd146e3e.jpg)
+
+# Troubleshooting
+
+## Unable to load key file
+
+If you encounter the following message during : 
+- public key generation
+- signature check with public key
+
+![ts1](https://user-images.githubusercontent.com/52102633/68897110-6e43a280-06f2-11ea-9b6e-9a5654eb64c3.jpg)
+
+![ts2](https://user-images.githubusercontent.com/52102633/68897111-6edc3900-06f2-11ea-8621-b25b20b7848c.jpg)
+
+**Check the public key format file**
+
+![solution](https://user-images.githubusercontent.com/52102633/68897109-6e43a280-06f2-11ea-9511-1dc219c60df0.jpg)
+
+> OpenSSL needs a public key encoded with UTF-8
