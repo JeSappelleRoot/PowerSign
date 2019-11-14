@@ -47,7 +47,7 @@ openssl.exe rsa -in public.pub -pubin -text -noout
 # OpenSSL path
 
 Before use PowerSign script, you need to specify the OpenSSL binary path.  
-Line 114, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust it to your OpenSSL configuration
+Line 115, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust it to your OpenSSL configuration
 
 
 # Example
