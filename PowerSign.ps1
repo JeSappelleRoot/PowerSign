@@ -17,7 +17,7 @@ Write-Host "
   _____                       _____ _             
  |  __ \                     / ____(_)            
  | |__) |____      _____ _ _| (___  _  __ _ _ __  
- |  ___/ _ \ \ /\ / / _ \ '__\___ \| |/ _` | '_ \ 
+ |  ___/ _ \ \ /\ / / _ \ '__\___ \| |/ _' | '_ \ 
  | |  | (_) \ V  V /  __/ |  ____) | | (_| | | | |
  |_|   \___/ \_/\_/ \___|_| |_____/|_|\__, |_| |_|
                                        __/ |      
@@ -80,8 +80,7 @@ function makeSign ($exe, $key, $signFile, $inputFile) {
 # Function to make a signature
 
     # Pipe openssl process with -Passthru
-    $process = Start-Process $exe -NoNewWindow -Wait -ArgumentList "dgst -sha512 -sign $key -out $signFile $inputFile" `
-    -RedirectStandardOutput Out-Null -PassThru
+    $process = Start-Process $exe -NoNewWindow -Wait -ArgumentList "dgst -sha512 -sign $key -out $signFile $inputFile" -PassThru
     
     # Check exit code
     if ($process.ExitCode -eq 0) {Write-Host "[+] $inputFile successfully signed " -ForegroundColor Green}
