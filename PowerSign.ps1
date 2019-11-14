@@ -35,11 +35,11 @@ Write-Host "
 
 Sign method use SHA512 fingerprint method, which will sign with an asymetric key
     
-<-privateKey> : private key used to sign
-<-publicKey>  : public key used to verify signature
-<-mode>       : [sign/check] to specify which mode use
-<-signature>  : file which contains signature
-<-file>       : specify which file sign/check
+-privateKey : private key used to sign
+-publicKey  : public key used to verify signature
+-mode       : [sign/check] to specify which mode use
+-signature  : file which contains signature
+-file       : specify which file sign/check
 " -ForegroundColor Green
 
 
