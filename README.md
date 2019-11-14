@@ -19,6 +19,7 @@ To generate pair of private and public keys, you can use the following command :
 ```
 openssl.exe genrsa -out private.key 4096
 openssl.exe rsa -in private.key -pubout > public.pub
+openssl rsa -in public.pub -pubin -text -noout
 ```
 ![generate](https://user-images.githubusercontent.com/52102633/68892223-199b2a00-06e8-11ea-8044-4fe375234726.jpg)
 
@@ -29,7 +30,7 @@ openssl.exe rsa -in private.key -pubout > public.pub
 # OpenSSL path
 
 Before use PowerSign script, you need to specify the OpenSSL binary path.  
-Line 115, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust it to your OpenSSL configuration
+Line 114, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust it to your OpenSSL configuration
 
 
 # Example

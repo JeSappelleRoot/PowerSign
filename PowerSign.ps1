@@ -70,7 +70,7 @@ With this command line :
 Remember - To generate asymetric keys, use these commands : 
 - openssl.exe genrsa -out private.key 4096
 - openssl.exe rsa -in private.key -pubout > public.pub
-
+- openssl rsa -in public.pub -pubin -text -noout
 "
 }
 
