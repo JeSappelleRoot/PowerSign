@@ -23,6 +23,12 @@ openssl.exe rsa -in private.key -pubout > public.pub
 
 >You will obtain an RSA 4096 bits private key, and the associated public key
 
+# OpenSSL path
+
+Before use PowerSign script, you need to specify the OpenSSL binary path.  
+Line 115, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust it to your OpenSSL configuration
+
+
 # Example
 
 ## File signature with signature mode
