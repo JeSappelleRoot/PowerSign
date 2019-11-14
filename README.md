@@ -16,10 +16,16 @@ Sign method use SHA512 fingerprint method, which will sign with an asymetric key
 # Asymetric key generation
 
 To generate pair of private and public keys, you can use the following command : 
+
+- Generate private key
 ```
 openssl.exe genrsa -out private.key 4096
+openssl.exe rsa -in private.key -text -noout
+```
+- Generate public key
+```
 openssl.exe rsa -in private.key -pubout > public.pub
-openssl rsa -in public.pub -pubin -text -noout
+openssl.exe rsa -in public.pub -pubin -text -noout
 ```
 ![generate](https://user-images.githubusercontent.com/52102633/68892223-199b2a00-06e8-11ea-8044-4fe375234726.jpg)
 
