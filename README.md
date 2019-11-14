@@ -34,6 +34,10 @@ Line 115, modify `$opensslBin = "C:\OpenSSL-Win64\bin\openssl.exe"` and adjust i
 
 # Example
 
+Assume we have a file like :   
+
+![file](https://user-images.githubusercontent.com/52102633/68892222-199b2a00-06e8-11ea-8b0c-ac01cc72ec08.jpg)
+
 ## File signature with signature mode
 
 **Command line :** `PowerSign.ps1 -mode signature -privateKey C:\folder\private.key -signature C:\folder\signature.sha512 -file C:\folder\file_to_sign.pdf`
